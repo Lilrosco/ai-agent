@@ -22,7 +22,15 @@ def main():
         model="gemini-2.5-flash", contents=prompt
     )
 
-    print(response.text)
+    if response.usage_metadata:
+        prompt_token_count = response.usage_metadata.prompt_token_count
+        candidates_token_count = response.usage_metadata.candidates_token_count
+
+        print(f"Prompt tokens: {prompt_token_count}")
+        print(f"Response tokens: {candidates_token_count}")
+        print(f"Response: {response.text}")
+    else:
+        raise RuntimeError("Prompt failed to return a response")
 
 
 if __name__ == "__main__":
