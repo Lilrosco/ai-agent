@@ -7,7 +7,7 @@ from functions.get_files_info import get_files_info
 class TestGetFileInfo(unittest.TestCase):
 
     def test_files_info_calculator(self):
-        result =  get_files_info("calculator", ".")
+        result = get_files_info("calculator", ".")
         print("Result for current directory:\n" + result + "\n")
         self.assertTrue("main.py" in result)
         self.assertTrue("tests.py" in result)

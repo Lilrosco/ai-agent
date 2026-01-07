@@ -19,11 +19,7 @@ def get_files_info(working_directory, directory="."):
 
             for entry in entries:
                 dir_info.append(f"- {entry.name}: file_size={entry.stat().st_size} bytes, is_dir={entry.is_dir()}")
-                # print(entry.name)
-                # if entry.is_file():
-                #     print(f"  {entry.name} is a file")
-                # elif entry.is_dir():
-                #     print(f"  {entry.name} is a directory")
+
             return "\n".join(dir_info)
     except Exception as e:
         return f"Error: {e}"
