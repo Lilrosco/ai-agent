@@ -4,7 +4,6 @@ import unittest
 from config import MAX_CHARS
 from functions.get_file_content import get_file_content
 
-
 class TestGetFileInfo(unittest.TestCase):
 
     def test_get_file_content_truncates(self):
