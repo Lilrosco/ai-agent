@@ -4,7 +4,7 @@ import unittest
 from config import MAX_CHARS
 from functions.get_file_content import get_file_content
 
-class TestGetFileInfo(unittest.TestCase):
+class TestGetFileContent(unittest.TestCase):
 
     def test_get_file_content_truncates(self):
         file_path = "lorem.txt"

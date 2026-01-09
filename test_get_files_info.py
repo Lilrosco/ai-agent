@@ -3,7 +3,6 @@
 import unittest
 from functions.get_files_info import get_files_info
 
-
 class TestGetFileInfo(unittest.TestCase):
 
     def test_files_info_calculator(self):

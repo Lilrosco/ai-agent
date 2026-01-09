@@ -1,9 +1,9 @@
-# test_get_file_content.py
+# test_write_file.py
 
 import unittest
 from functions.write_file import write_file
 
-class TestGetFileInfo(unittest.TestCase):
+class TestWriteFile(unittest.TestCase):
 
     def test_write_file_succeeds(self):
         result = write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum")
